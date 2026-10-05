@@ -30,6 +30,25 @@ Other scripts: `npm test` (syntax check + logic tests), `npm run verify` (check 
 10. Explore Collaboration documents, messages, milestones, and activity ledger.
 11. Use Industry settings to edit the organization, optionally add an AI key, export or import JSON, or reset the demo.
 
+## Deploy
+
+The repo is Vercel-ready: `vercel.json` sets the output directory to `dist`, and
+there is no `build` script, so Vercel serves the three static files directly.
+
+**Git integration (recommended).** Import the GitHub repo at
+https://vercel.com/new. Leave every build setting on its default — `vercel.json`
+supplies them. Every push to `main` then redeploys automatically.
+
+**Or from the CLI:**
+
+```sh
+npx vercel login
+npx vercel --prod
+```
+
+Browser localStorage is per-origin, so the deployed site starts with fresh demo
+data and does not share edits with localhost.
+
 ## Scope
 
 All people and publications are demonstration data. Matching is deterministic topic/method/evidence scoring. Optional AI (if a key is provided) is used only for extraction, match explanations, and outreach drafts. Scores are internal ranking signals, not calibrated probabilities or investment advice. Only public (or limited) profiles with a compatible opportunity type and publication evidence appear in matching results.
