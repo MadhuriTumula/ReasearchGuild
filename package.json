@@ -1,0 +1,17 @@
+{
+  "name": "researchbridge-mvp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ResearchBridge MVP demo — dependency-free static web app. No build step.",
+  "scripts": {
+    "dev": "node tools/dev-server.cjs",
+    "start": "node tools/dev-server.cjs",
+    "test": "node --check dist/app.js && node tests/test-demo.cjs",
+    "check": "node --check dist/app.js",
+    "checksums": "find . -type f ! -name SHA256SUMS.txt ! -name .DS_Store ! -path './node_modules/*' -exec shasum -a 256 {} + | sed 's|\\./||' | sort -k2 > SHA256SUMS.txt && echo 'SHA256SUMS.txt regenerated'",
+    "verify": "shasum -a 256 -c SHA256SUMS.txt"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

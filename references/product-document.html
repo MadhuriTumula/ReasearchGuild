@@ -1,0 +1,308 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}</style><style>:root{color-scheme:light dark;--md-bg:#fff;--md-text:rgba(0,0,0,.8);--md-muted:rgba(0,0,0,.6);--md-fill:rgba(0,0,0,.04);--md-fill-strong:rgba(0,0,0,.06);--md-rule:rgba(0,0,0,.1);--md-rule-strong:rgba(0,0,0,.16);--md-link:hsl(210 100% 45%)}@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){--md-bg:#0d0d0d;--md-text:rgba(255,255,255,.85);--md-muted:rgba(255,255,255,.6);--md-fill:rgba(255,255,255,.06);--md-fill-strong:rgba(255,255,255,.09);--md-rule:rgba(255,255,255,.14);--md-rule-strong:rgba(255,255,255,.22);--md-link:hsl(210 100% 72%)}}:root[data-theme="dark"]{color-scheme:dark;--md-bg:#0d0d0d;--md-text:rgba(255,255,255,.85);--md-muted:rgba(255,255,255,.6);--md-fill:rgba(255,255,255,.06);--md-fill-strong:rgba(255,255,255,.09);--md-rule:rgba(255,255,255,.14);--md-rule-strong:rgba(255,255,255,.22);--md-link:hsl(210 100% 72%)}:root[data-theme="light"]{color-scheme:light}@media print{:root,:root[data-theme="dark"]{color-scheme:light;--md-bg:#fff;--md-text:rgba(0,0,0,.8);--md-muted:rgba(0,0,0,.6);--md-fill:rgba(0,0,0,.04);--md-fill-strong:rgba(0,0,0,.06);--md-rule:rgba(0,0,0,.1);--md-rule-strong:rgba(0,0,0,.16);--md-link:hsl(210 100% 45%)}}body{background:var(--md-bg);color:var(--md-text);max-width:720px;margin:0 auto;padding:32px;display:flex;flex-direction:column;gap:10px;font:14px/1.55 -apple-system,BlinkMacSystemFont,'SF Pro','Segoe UI',sans-serif;overflow-wrap:break-word}body>:first-child{margin-top:0}h1,h2,h3,h4,h5,h6{margin:6px 0 0;line-height:1.25;font-weight:600;text-wrap:balance}h1{font-size:1.35em}h2{font-size:1.15em;color:var(--md-muted)}h3,h4,h5,h6{font-size:1em}p,ul,ol,blockquote,table,pre,hr{margin:0}strong{font-weight:600}a{color:var(--md-link);text-decoration:none}a:hover{text-decoration:underline}ul,ol{display:flex;flex-direction:column;gap:6px;padding-left:22px}ul{list-style:disc}ol{list-style:decimal}:is(li,td,th)>*+:is(p,ul,ol,blockquote){margin-top:6px}blockquote{display:flex;flex-direction:column;gap:10px;border-left:2px solid var(--md-rule);padding-left:10px;color:var(--md-muted)}:not(pre)>code{background:var(--md-fill);padding:1px 3px;border-radius:4px;font:.92em 'SF Mono',ui-monospace,Menlo,Consolas,monospace}a>code{background:none;color:inherit}pre{background:var(--md-fill);padding:10px 12px;border-radius:6px;overflow-x:auto;font:12px/1.5 'SF Mono',ui-monospace,Menlo,Consolas,monospace;margin-block:4px}pre code{background:none;padding:0;font:inherit}table{width:100%;border-collapse:separate;border-spacing:2px;font:inherit}th,td{padding:6px 8px;border-radius:3px;text-align:left;vertical-align:top}th{background:var(--md-fill-strong);font-weight:600}td{background:var(--md-fill)}:is(th,td) :not(pre)>code{background:transparent}hr{border:0;border-top:1px solid var(--md-rule-strong);margin-block:10px}img{max-width:100%;height:auto;border-radius:4px}</style>
+</head><body>
+<h1>Snack Guild — Product Document (MVP PRD)</h1>
+<p><strong>Team 33 · Version 0.1 · Consolidated from Missions 2, 3 and 4</strong></p>
+<hr>
+<h2>1. Product Overview</h2>
+<p><strong>One-line positioning:</strong> An AI matching platform that connects academic research with industry decision-makers (corporate R&amp;D, investors, technology scouts). A company describes a need, the system returns a shortlist of researchers with evidence and explanations, and an introduction request replaces cold outreach.</p>
+<p><strong>Vision:</strong> Turn scattered academic output into industry impact, funding and partnerships.</p>
+<p><strong>MVP goal:</strong> Validate one core hypothesis: <em>Does AI matching help companies find relevant researchers more effectively than keyword search, and will users actually request introductions?</em></p>
+<hr>
+<h2>2. Problem and Opportunity</h2>
+<table>
+<thead>
+<tr>
+<th>Current state</th>
+<th>Consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Researcher expertise is scattered across papers, lab pages, LinkedIn, conferences and personal networks</td>
+<td>Companies spend significant time finding experts and depend on existing relationships</td>
+</tr>
+<tr>
+<td>Researchers have no time to promote their work (a PI may juggle ~25 projects)</td>
+<td>Results never reach industry; funding, collaboration and commercialization opportunities are missed</td>
+</tr>
+<tr>
+<td>Cold outreach gets ~5% response rates</td>
+<td>Neither side can cheaply find the right counterpart</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Market gap:</strong> Existing tools (paper indexes, LinkedIn, general social media) each cover one piece. None is purpose-built for matching research with the people who fund, license, hire or commercialize it, and none offers IP-aware trust infrastructure.</p>
+<blockquote>
+<p>Note: Problem size, pain frequency and willingness to pay are <strong>hypotheses to be validated through interviews</strong>, not established facts.</p>
+</blockquote>
+<hr>
+<h2>3. Target Users</h2>
+<h3>Demand side (paying customers)</h3>
+<ul>
+<li><strong>Persona: Daniel Chen, 38.</strong> Principal at an early-stage deep-tech VC fund who also advises corporate R&amp;D teams on technology scouting. Looks for projects to invest in and technologies to license.</li>
+<li>Others: corporate R&amp;D and innovation teams, recruiters seeking research talent.</li>
+</ul>
+<h3>Supply side</h3>
+<ul>
+<li><strong>Persona: Dr. Sarah Miller, 41.</strong> Associate Professor leading a 12-person lab; wants her research to reach industry, funding and collaborators.</li>
+<li>Others: postdocs, PhD students, labs, universities.</li>
+</ul>
+<h3>Pain point priorities</h3>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Pain point</th>
+<th>Product implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>1. Fragmented discovery 2. No reliable path to the right counterpart</td>
+<td>Primary value: topic-based discovery plus a direct path to the right person</td>
+</tr>
+<tr>
+<td>Adoption barrier</td>
+<td>3. Researchers have no time to communicate</td>
+<td>Decides cold-start success; posting effort must be minimal</td>
+</tr>
+<tr>
+<td>Trust conditions</td>
+<td>4. Hard to judge credibility/readiness 5. Fear of sharing too early</td>
+<td>Design constraints: evidence links and visibility control</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>4. Core User Flow (MVP Main Path)</h2>
+<p><strong>Company side</strong></p>
+<ol>
+<li>Create an organization profile and choose the type of opportunity (research collaboration, sponsored research, consulting, talent recruitment, licensing)</li>
+<li>Enter a natural-language need, e.g. <em>&quot;We are looking for researchers working on computer vision and anomaly detection for industrial quality inspection.&quot;</em></li>
+<li>View an AI-generated ranked shortlist with match explanation and evidence</li>
+<li>Click <strong>Request Introduction</strong> (optionally using an AI-generated outreach draft, which <strong>must be reviewed and approved by the user before sending</strong>)</li>
+</ol>
+<p><strong>Researcher side</strong></p>
+<ol>
+<li>Create or view a profile: research topics, publications, projects, methods, skills, (optional) patents</li>
+<li>Set which opportunity types they are open to</li>
+<li>Receive an introduction request, then <strong>accept or decline</strong>; if accepted, both parties proceed to contact</li>
+</ol>
+<p><strong>Fallback states</strong></p>
+<ul>
+<li>Insufficient information: the system asks a clarifying question, e.g. &quot;Are you primarily looking for research collaboration, hiring, licensing, or consulting?&quot;</li>
+<li>No strong match: the system <strong>says so explicitly</strong> rather than presenting weak matches as highly relevant</li>
+</ul>
+<hr>
+<h2>5. Functional Requirements</h2>
+<h3>P0: Must have for MVP</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Feature</th>
+<th>Acceptance criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Researcher profile</td>
+<td>Create/view profile; add topics, publications, projects, expertise; set visible opportunity types</td>
+<td>A researcher can complete a basic profile in about 5 minutes</td>
+</tr>
+<tr>
+<td>Organization profile</td>
+<td>Create profile; select need type</td>
+<td>Can be saved and edited</td>
+</tr>
+<tr>
+<td>Need input (Screen 1)</td>
+<td>Text box + opportunity-type dropdown + &quot;Find Researchers&quot; button</td>
+<td>Submission shows a loading state and returns results</td>
+</tr>
+<tr>
+<td>AI matching engine</td>
+<td>1) Extract technical concepts from the request 2) Compare against researcher profiles 3) Rank 4) Generate explanation 5) Surface evidence</td>
+<td>Every match includes a rationale, at least one piece of evidence and expertise tags</td>
+</tr>
+<tr>
+<td>Match results (Screen 2)</td>
+<td>Card with name, institution, tags, &quot;Why this match&quot;, &quot;Relevant work&quot;, [View Profile] [Request Introduction]</td>
+<td>User can understand why the researcher was selected</td>
+</tr>
+<tr>
+<td>Introduction flow</td>
+<td>Send request, researcher receives it, accepts or declines, both sides notified</td>
+<td>End-to-end flow works</td>
+</tr>
+<tr>
+<td>Outreach draft</td>
+<td>Personalized draft based on the match</td>
+<td>User must review and edit before it can be sent</td>
+</tr>
+<tr>
+<td>Empty/clarify states</td>
+<td>Ask clarifying question; honest &quot;no strong match&quot; message</td>
+<td>No inflated relevance</td>
+</tr>
+</tbody>
+</table>
+<h3>P1: Should have</h3>
+<ul>
+<li>Investor/scout mode (reuses the same matching engine)</li>
+<li><strong>Keyword/filter search baseline</strong> for AI vs non-AI comparison (see Section 8)</li>
+<li>Admin view for profile moderation and reviewing questionable matches</li>
+</ul>
+<h3>P2: Deferred</h3>
+<ul>
+<li>Follow topics and alerts</li>
+<li>Tiered visibility and the confidential Collaboration Vault with in-app NDAs</li>
+<li>AI-assisted posting (structured updates in under 5 minutes)</li>
+<li>PhD/postdoc job discovery</li>
+</ul>
+<hr>
+<h2>6. AI Design</h2>
+<p><strong>Input:</strong> Company natural-language need plus opportunity type
+<strong>Data:</strong> Researcher topics, publication titles/abstracts, projects, methods, skills, patents (where available)</p>
+<p><strong>Suggested lightweight implementation:</strong></p>
+<ol>
+<li><strong>Request parsing:</strong> An LLM extracts technical concepts, application area and desired engagement type</li>
+<li><strong>Retrieval:</strong> Embedding similarity search over researcher profiles to recall the top N, optionally combined with keyword filters</li>
+<li><strong>Re-ranking and explanation:</strong> An LLM judges relevance for each candidate and writes an explanation that <strong>cites only evidence present in the profile</strong></li>
+<li><strong>Confidence threshold:</strong> Matches below the threshold are not shown; if all fall below it, return &quot;no strong match&quot;</li>
+</ol>
+<p><strong>Guardrails:</strong></p>
+<ul>
+<li>Never claim a researcher is definitively the best fit or that a collaboration will succeed</li>
+<li>Every explanation must trace back to a specific publication or project in the profile (to limit hallucination)</li>
+<li>No automated claims of commercial viability and no investment recommendations</li>
+<li>No autonomous outreach: every message requires human approval</li>
+</ul>
+<hr>
+<h2>7. Minimal Data Model</h2>
+<ul>
+<li><strong>Researcher:</strong> id, name, institution, verified (bool), topics[], methods[], skills[], open_to[], visibility</li>
+<li><strong>Publication:</strong> id, researcher_id, title, abstract, year, link</li>
+<li><strong>Project:</strong> id, researcher_id, title, description</li>
+<li><strong>Organization:</strong> id, name, type (company/VC/recruiter), description</li>
+<li><strong>Request:</strong> id, org_id, text, opportunity_type, extracted_concepts[]</li>
+<li><strong>Match:</strong> id, request_id, researcher_id, score, explanation, evidence_refs[]</li>
+<li><strong>Introduction:</strong> id, match_id, draft_message, status (pending/accepted/declined), timestamps</li>
+</ul>
+<p><strong>Initial data:</strong> A small, manually curated dataset (roughly 20 to 50 researchers) using permitted public information or clearly labeled demonstration profiles.</p>
+<hr>
+<h2>8. Evaluation Plan</h2>
+<p><strong>Questions to test</strong> (from Mission 4; report actual observed results rather than claiming success in advance):</p>
+<ol>
+<li>Does a request produce relevant matches?</li>
+<li>Are explanations grounded in the researcher's information?</li>
+<li>Can a user understand why a researcher was selected?</li>
+<li>Can the user successfully request an introduction?</li>
+<li>Does the workflow communicate the next step clearly?</li>
+</ol>
+<p><strong>AI vs non-AI baseline:</strong> Run 5 to 10 test requests through both keyword/filter search and AI matching. Have 3 to 5 target users rate relevance blind. Compare top-3 hit rate, time to a usable candidate, and explanation trust ratings.</p>
+<hr>
+<h2>9. Business Model (Hypotheses to Validate)</h2>
+<ul>
+<li><strong>Primary revenue:</strong> Tiered B2B subscription for companies, corporate R&amp;D, recruiters and investors (advanced discovery, matching, monitoring)</li>
+<li><strong>Secondary:</strong> Qualified introduction/lead fees; sponsored challenges and research opportunity postings; institutional subscriptions for universities and research organizations</li>
+<li><strong>Top three revenue hypotheses:</strong>
+<ol>
+<li>Companies will pay if the product saves meaningful time versus manual searching</li>
+<li>Companies and recruiters will pay to discover PhDs, postdocs and researchers by research expertise rather than job boards and resumes</li>
+<li>Universities and research organizations will value increased external visibility and measurable connections with companies</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>The MVP includes no payment processing; willingness to pay is tested through interviews or a landing page.</p>
+</blockquote>
+<hr>
+<h2>10. Scope Boundaries</h2>
+<p><strong>Human-supported (manual / Wizard-of-Oz in MVP):</strong> Verifying researcher identity and institutional affiliation, moderating profiles, reviewing questionable matches, facilitating the first introduction, helping organizations create their first opportunity, curating the initial dataset, handling sensitive/IP questions, following up after introductions.</p>
+<p><strong>Deliberately out of scope:</strong> Investment transactions, payment processing, grant administration, legal contracts, IP agreements, university ERP integrations, full ATS functionality, full academic social networking, full-scale paper indexing, autonomous outreach without human approval, automated claims of commercial viability, automated investment recommendations, ingestion of confidential/unpublished research.</p>
+<hr>
+<h2>11. Trust and Privacy</h2>
+<ul>
+<li>Evidence links to public papers, projects, patents and institutional profiles</li>
+<li>Researchers control: what is publicly displayed, which opportunities they are open to, whether they respond, and what confidential research they choose not to disclose</li>
+<li>Companies control: the problem they submit, which researchers they view, whether they make contact, and whether a collaboration proceeds</li>
+<li>The platform does not ingest any unpublished or confidential research</li>
+</ul>
+<hr>
+<h2>12. Success Metrics (MVP Stage)</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Example target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Share of matches rated 4/5 or higher by users</td>
+<td>60% or more</td>
+</tr>
+<tr>
+<td>Top-3 hit rate improvement over keyword baseline</td>
+<td>Clearly better than baseline</td>
+</tr>
+<tr>
+<td>Share of users completing need to introduction request</td>
+<td>50% or more</td>
+</tr>
+<tr>
+<td>Researcher acceptance rate of introduction requests</td>
+<td>Record and analyze</td>
+</tr>
+<tr>
+<td>Organizations expressing willingness to pay in interviews</td>
+<td>Record and analyze</td>
+</tr>
+</tbody>
+</table>
+<p>(Targets are suggestions; adjust to your team's context.)</p>
+<hr>
+<h2>13. Suggested Milestones</h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Work</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Data and backend</td>
+<td>Curate researcher dataset; database and API; embedding index</td>
+</tr>
+<tr>
+<td>2. Matching engine</td>
+<td>Request parsing, retrieval, explanation generation, confidence threshold</td>
+</tr>
+<tr>
+<td>3. Frontend</td>
+<td>Screen 1 and Screen 2, profile pages, introduction flow</td>
+</tr>
+<tr>
+<td>4. Evaluation</td>
+<td>Keyword baseline; user testing; record actual results</td>
+</tr>
+<tr>
+<td>5. Interviews and iteration</td>
+<td>Validate pain point ranking and payment hypotheses</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Suggested stack (replaceable):</strong> Next.js/React frontend, Python (FastAPI) backend, Postgres with pgvector, and an LLM API.</p>
+<hr>
+<h2>14. Open Questions</h2>
+<ol>
+<li>Which opportunity type to focus on first: research collaboration, sponsored research/funding, consulting, or talent recruitment? (This determines the initial demand-side user and dataset.)</li>
+<li>Which research domain for the initial dataset? (Suggestion: computer vision / industrial AI, consistent with the examples.)</li>
+<li>Researcher cold start: how do we get the first researchers to complete profiles?</li>
+<li>First demand-side users: corporate R&amp;D teams or VC/scouts?</li>
+</ol>
+
+</body></html>
